@@ -1,3 +1,3 @@
 bucket = "tp-terraform-ynov"
-key = "instance_antonio.tfstate"
+key = "instance_DI_RUGGIERO.tfstate"
 region = "eu-west-3"

@@ -5,6 +5,9 @@ terraform {
       version = "~> 3.0"
     }
   }
+
+  backend "s3" {}
+  
 }
 
 # Région aws
@@ -12,6 +15,8 @@ terraform {
 provider "aws" {
   region     = var.region
 }
+
+
 
 # VPC utilisé
 
@@ -52,10 +57,9 @@ resource "aws_instance" "web" {
 
 # Sécurity group 
 
-resource "aws_security_group" "security_group_DI_RUGGIERO" {
-   name        = "security_group_DI_RUGGIERO"
-   description = "security_group_DI_RUGGIERO"
-
+resource "aws_security_group" "security_group" {
+   name        = "instance_terraform_DI_RUGGIERO"
+   
    ingress {
       description = "Autorisation SSH Port"
       from_port   = 22

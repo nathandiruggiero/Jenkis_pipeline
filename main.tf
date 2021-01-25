@@ -4,8 +4,8 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 3.0"
     }
-  }
-
+  } 
+   
   backend "s3" {}
   
 }
@@ -59,7 +59,7 @@ resource "aws_instance" "web" {
 
 resource "aws_security_group" "security_group" {
    name        = "instance_terraform_DI_RUGGIERO"
-   
+
    ingress {
       description = "Autorisation SSH Port"
       from_port   = 22
